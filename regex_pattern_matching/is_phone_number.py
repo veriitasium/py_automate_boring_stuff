@@ -27,6 +27,10 @@ def is_phone_number(text):
 
 def is_phone_number(text):
     phone_num_regex = re.compile(r"\d{3}-\d{3}-\d{4}")
+    mo = phone_num_regex.search(text)
+    if mo is None:
+        return False
+    return True
 
 
 def find_phone_number(text):
